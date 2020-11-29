@@ -28,13 +28,92 @@ body {
   background-color: var(--primery-background-color);
   font-family: Roboto, sans-serif;
 }
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+img {
+  display: block;
+}
 .address,
 .footer-address {
   font-style: normal;
 }
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 avto;
+  outline: 1px solid red;
+}
 /*=================================  END BODY  =========================*/
 
 /*=================================  ШАПКА  =========================*/
+.header {
+  display: flex;
+  align-items: center;
+  outline: 1px solid red;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  outline: 1px solid red;
+}
+.logo-item {
+  display: flex;
+  align-items: center;
+  margin-right: 93px;
+  outline: 1px solid red;
+}
+.menu-nav {
+  display: flex;
+  min-width: 294px;
+  justify-content: space-between;
+  outline: 1px solid red;
+}
+.address-item {
+  display: flex;
+  align-items: center;
+  outline: 1px solid red;
+}
+.addres-contacts {
+  display: flex;
+  align-items: center;
+  outline: 1px solid red;
+}
+.header-mail {
+  display: flex;
+  align-items: center;
+  margin-left: 331px ;
+  outline: 1px solid red;
+}
+
+
+}
+.header-tel {
+  display: flex;
+  align-items: center;
+  margin-right: 0 avto;
+  outline: 1px solid red;
+}
+
 .logotype {
   color: var(--logo-color-heder);
   font-family: 'Raleway', sans-serif;
@@ -44,7 +123,6 @@ body {
   /* identical to box height */
 
   letter-spacing: 0.03em;
-  text-decoration: none;
 }
 .logotype-text {
   color: var(--accent-color);
@@ -62,7 +140,6 @@ body {
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--primery-text-color);
-  text-decoration: none;
 }
 .menu-nav-link-studio:hover,
 .menu-nav-link-studio:focus,
@@ -79,9 +156,7 @@ body {
 .menu-nav-link-contacts:active {
   color: var(--accent-color);
 }
-.address a {
-  text-decoration: none;
-}
+
 .header-mail,
 .header-tel {
   font-family: 'Roboto', sans-serif;
@@ -225,9 +300,7 @@ body {
 .footer {
   background-color: var(--footer-background-color);
 }
-.footer a {
-  text-decoration: none;
-}
+
 .footer-logotype {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
