@@ -26,7 +26,7 @@
 body {
   color: var(--primery-text-color);
   background-color: var(--primery-background-color);
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .list {
   list-style: none;
@@ -66,26 +66,22 @@ img {
 /*=================================  END BODY  =========================*/
 
 /*=================================  ШАПКА  =========================*/
-.header {
+.header .container {
   display: flex;
   align-items: center;
   outline: 1px solid red;
+}
+.header {
+  background-color: seagreen;
 }
 .header-nav {
   display: flex;
   align-items: center;
   outline: 1px solid red;
 }
-.logo-item {
-  display: flex;
-  align-items: center;
-  margin-right: 93px;
-  outline: 1px solid red;
-}
 .menu-nav {
   display: flex;
-  min-width: 294px;
-  justify-content: space-between;
+  align-items: center;
   outline: 1px solid red;
 }
 .address-item {
@@ -93,27 +89,31 @@ img {
   align-items: center;
   outline: 1px solid red;
 }
-.addres-contacts {
-  display: flex;
-  align-items: center;
+.header .logotype {
+  margin-right: 93px;
   outline: 1px solid red;
 }
-.header-mail {
-  display: flex;
-  align-items: center;
-  margin-left: 331px ;
+.menu-nav-item:not(:last-child) {
+  margin-right: 50px;
   outline: 1px solid red;
+}
+.header .address {
+  margin-left: 331px;
+}
+.addres-contacts:first-child {
+  outline: 1px solid red;
+  margin-right: 50px;
+}
+/*
+/*
+
+/*
+.header .address {
+  margin-left: auto;
 }
 
 
-}
-.header-tel {
-  display: flex;
-  align-items: center;
-  margin-right: 0 avto;
-  outline: 1px solid red;
-}
-
+*/
 .logotype {
   color: var(--logo-color-heder);
   font-family: 'Raleway', sans-serif;
