@@ -5,6 +5,7 @@
 /* цвет логотипа в футере #FFFFFF */
 /* цвет акцента в футере #FFFFFF */
 /* цвет адреса в футере rgba(255, 255, 255, 0.6)*/
+/*цвет тени кнопки в герои rgba(0, 0, 0, 0.15)*/
 
 :root {
   --primery-text-color: #212121;
@@ -21,6 +22,7 @@
   --hero-background-color: #2f303a;
   --button-background-color: #2196f3;
   --footer-background-color: #2f303a;
+  --button-color-shadow: rgba(0, 0, 0, 0.15);
 }
 /*=================================  BODY  =========================*/
 body {
@@ -60,7 +62,7 @@ img {
 .container {
   width: 1200px;
   padding: 0 15px;
-  margin: 0 avto;
+  margin: 0 auto;
   outline: 1px solid red;
 }
 /*=================================  END BODY  =========================*/
@@ -73,6 +75,8 @@ img {
 }
 .header {
   background-color: seagreen;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .header-nav {
   display: flex;
@@ -181,6 +185,13 @@ img {
 /*=================================  ГЕРОЙ  =========================*/
 .hero {
   background-color: var(--hero-background-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .hero-title {
   font-family: 'Roboto', sans-serif;
@@ -189,13 +200,20 @@ img {
   line-height: 1.364;
   /* or 136% */
 
+  min-width: 696px;
+  height: 120px;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   color: var(--hero-color-title);
+  margin-bottom: 30px;
 }
 .modal-btn {
+  min-width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px var(--button-color-shadow);
+  border-radius: 4px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -204,11 +222,13 @@ img {
 
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   letter-spacing: 0.06em;
 
   color: var(--button-color-title);
   background-color: var(--button-background-color);
+  cursor: pointer;
+  padding: 10px 32px;
 }
 .modal-btn:hover,
 .modal-btn:focus,
