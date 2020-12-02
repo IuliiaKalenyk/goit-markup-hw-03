@@ -26,6 +26,7 @@
   --button-color-shadow: rgba(0, 0, 0, 0.15);
   --button-background-color-portfolio: #f5f4fa;
   --border-color-pictures: #eeeeee;
+  --pictures-background-color: #ffffff;
 }
 /*=================================  BODY  =========================*/
 body {
@@ -248,22 +249,21 @@ img {
   background-color: yellow;
 }
 .features .container {
+  display: flex;
 }
 .features-list {
   display: flex;
   flex-wrap: wrap;
 }
-.features-list > .features-studios {
+.features-studios {
   width: 270px;
 }
-.features-studios {
-  justify-content: space-between;
+.features-studios:not(:last-child) {
+  margin-right: 30px;
 }
-
-/*.features-title {
+.features-title {
   display: none;
-}*/
-
+}
 .features-names {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -273,6 +273,7 @@ img {
   text-transform: uppercase;
 
   color: var(--primery-text-color);
+  margin-bottom: 10px;
 }
 .features-information {
   font-family: 'Roboto', sans-serif;
@@ -288,6 +289,10 @@ img {
 /*=================================  END ОСОБЕННОСТИ  =========================*/
 
 /*=================================  ЧЕМ МЫ ЗАНИМАЕМСЯ  =========================*/
+.occupation {
+  padding-bottom: 94px;
+  background-color: darkseagreen;
+}
 .occupation-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -297,23 +302,59 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--primery-text-color);
+  display: inline-block;
+  min-width: 377px;
+  margin-bottom: 50px;
 }
+.occupation .container {
+  background-color: darkgoldenrod;
+  text-align: center;
+}
+.occupation-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.occupation-studios:not(:last-child) {
+  margin-right: 30px;
+}
+
 /*=================================  END ЧЕМ МЫ ЗАНИМАЕМСЯ  =========================*/
 
 /*=================================  НАША КОМАНДА  =========================*/
 .team {
   background-color: var(--section-background-color);
+  padding-top: 82px;
+  padding-bottom: 106px;
+}
+.team .container {
+  text-align: center;
 }
 
+.team-list {
+  display: flex;
+}
+.team-people:not(:last-child) {
+  margin-right: 30px;
+}
+.team-people {
+  background-color: var(--pictures-background-color);
+  /* material shadow v1 */
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .team-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.167;
-  text-align: center;
   letter-spacing: 0.03em;
 
   color: var(--primery-text-color);
+  display: inline-block;
+  min-width: 264px;
+  margin-bottom: 50px;
 }
 .team-employee {
   font-family: 'Roboto', sans-serif;
@@ -324,6 +365,9 @@ img {
 
   letter-spacing: 0.03em;
   color: var(--primery-text-color);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team-profession {
   font-family: Roboto;
@@ -335,12 +379,16 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 30px;
 }
 /*=================================  END НАША КОМАНДА  =========================*/
 
 /*=================================  ФУТЕР  =========================*/
 .footer {
   background-color: var(--footer-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-logotype {
@@ -407,6 +455,7 @@ img {
 }
 .list-of-services {
   padding-top: 94px;
+  padding-bottom: 90px;
   background-color: coral;
 }
 .list-of-services .container {
@@ -467,7 +516,6 @@ img {
 .categories-of-services {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 90px;
 }
 .services-item {
   background: var(--primery-background-color);
